@@ -1,0 +1,9 @@
+.search-top {
+    border: none;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+.fs-header-item {
+    font-size: 12px;
+}
