@@ -8,8 +8,7 @@
       </div>
       <div class="modal-body">
         <div class="mb-3">Đăng nhập với tư cách</div>
-        <a href="/foody_shop/admin/login.php" class="btn btn-outline-secondary">Administrator</a>
-        <a href="#" class="btn btn-outline-secondary">Shopper</a>
+        <a href="/Blog_test/admin/login.php" class="btn btn-outline-secondary">Administrator</a>
         <a href="#" class="btn btn-outline-secondary">Customer</a>
       </div>
       <div class="modal-footer d-flex justify-content-center">

@@ -1,7 +1,5 @@
 .search-top {
-    border: none;
-    -webkit-transition: width .35s ease-in-out;
-    transition: width .35s ease-in-out;
+    border: 2px solid var(--primary-color);
 }
 
 .fs-header-item {
