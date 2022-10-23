@@ -1,9 +1,13 @@
 <?php
 session_start();
 ob_start();
+if (isset($_SESSION["email_ad"])) {
+  header('location: index.php');
+}
+
 $conn = @new mysqli("localhost", "root", "", "blog_test" );
 if ($conn->connect_error) {
-    die("có lôi xảy ra".$conn->connect_error);
+    die("có lỗi xảy ra".$conn->connect_error);
 } 
 
 $truyvan = "SELECT email, password FROM admin";
@@ -39,6 +43,7 @@ if (isset($_POST['login_ad'])) {
         if($row["email"] == $email && $row["password"] == $password) {
             $_SESSION["email_ad"] = $email;
             $_SESSION["pwd_ad"] = $password;
+            $conn->close();
             header('location: index.php');
             break;
         }
@@ -49,9 +54,23 @@ if (isset($_POST['login_ad'])) {
 <div class="row d-flex justify-content-center align-items-center h-100">
   <div class="col-lg-12 col-xl-11">
     <div class="card-body p-md-5">
+        <?php 
+        // Thông báo đổi mật khẩu thành công
+          if (isset($_COOKIE["thong_bao"])) {
+        ?>
+      <div class="row justify-content-start mb-3">  
+        <div class="alert alert-success col-5">
+          <i class="fa-sharp fa-solid fa-circle-check"></i>           
+            <?php
+            echo $_COOKIE["thong_bao"];
+            ?>
+        </div>
+      </div>
+      <?php
+          }
+      ?>
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 shadow-sm p-3 mb-5 bg-body rounded">
-
           <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 user-select-none">Login Admin</p>
           <form class="mx-1 mx-md-4" action="" accept-charset="UTF-8" method="post">
             <!-- <input type="hidden" name="authenticity_token" value="8Fbe9hfBpqPx_ZXk5jR5LonDJ4lV50D91z39EZ8jJnh7iC7OsaO3pW-TdTF4w0Wo26rlq0fKTCbtgw8ETwu1NQ" autocomplete="off" /> -->

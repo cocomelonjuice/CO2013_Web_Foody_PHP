@@ -44,7 +44,8 @@
                 <img src="./includes/img/profile_1913304.jpg" class="admin-info__img rounded-circle" style="width: 30px;" alt="">
             </div>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="./change_password.php">Setting</a>
+              <a class="dropdown-item" href="./change_password.php" data-bs-toggle='modal' data-bs-target='#change_pwd_ad'>Change_password</a>
+              <!-- <button href='#' class='edit btn btn-warning' value='". $row["ma_loai_sua"]."' data-bs-toggle='modal' data-bs-target='#capnhat'></button> -->
               <a class="dropdown-item" href="./logout.php">Logout</a> 
             </div>
           </div>
