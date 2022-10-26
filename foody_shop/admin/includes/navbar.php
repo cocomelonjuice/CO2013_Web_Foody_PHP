@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Blog_test">Trang chủ</a>
+            <a class="nav-link active" aria-current="page" href="/foody_shop">Trang chủ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Thông kê</a>
@@ -22,8 +22,9 @@
               Quản lý
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./users/">Người dùng</a></li>
-              <li><a class="dropdown-item" href="./posts/">posts</a></li>
+              <li><a class="dropdown-item" href="/foody_shop/admin/users/">Người dùng</a></li>
+              <li><a class="dropdown-item" href="/foody_shop/admin/category/">Danh mục sản phẩm</a></li>
+              <li><a class="dropdown-item" href="#">Sản phẩm</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">More</a></li>
             </ul>

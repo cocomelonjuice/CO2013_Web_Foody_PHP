@@ -39,8 +39,9 @@ $password ='';
 if (isset($_POST['login_ad'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $hash_password = md5($password);
     while ($row = $ketqua->fetch_assoc()) {
-        if($row["email"] == $email && $row["password"] == $password) {
+        if($row["email"] == $email && $row["password"] == $hash_password) {
             $_SESSION["email_ad"] = $email;
             $_SESSION["pwd_ad"] = $password;
             $conn->close();
