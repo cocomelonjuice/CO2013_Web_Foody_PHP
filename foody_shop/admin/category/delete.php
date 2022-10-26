@@ -5,10 +5,10 @@
         die("Kết nối thất bại ". $conn->connect_error);
     }
 
-   	if (isset($_POST["delete_user"])) {
-		$user_id = $_POST["d_user_id"];
-		$sqlDeleteUser = "DELETE FROM user where user_id='$user_id'";
-		$conn->query($sqlDeleteUser);
+   	if (isset($_POST["delete_cate"])) {
+		$category_id = $_POST["d_category_id"]; 
+		$sqlDeleteCate = "DELETE FROM category WHERE category_id = '$category_id'";
+		$conn->query($sqlDeleteCate);
 		$conn->close();
 		header("location: index.php");
    	}
